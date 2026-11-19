@@ -1,0 +1,35 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hojita · cuaderno de campo</title>
+<meta name="theme-color" content="#4a6b3a">
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="leaf" viewBox="0 0 24 24"><path d="M5 19C4 9 10 3 21 3c0 11-6 17-14 16M5 19l9-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="drop" viewBox="0 0 24 24"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<symbol id="pot" viewBox="0 0 24 24"><path d="M5 9h14l-2 11H7zM4 9h16M12 9V4M12 6c-2-2-4-2-5-1M12 6c2-2 4-2 5-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="temp" viewBox="0 0 24 24"><path d="M10 14V5a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="bag" viewBox="0 0 24 24"><path d="M7 8h10l1 12H6zM9 8l1-4h4l1 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="paw" viewBox="0 0 24 24"><circle cx="6" cy="10" r="1.8"/><circle cx="10" cy="6" r="1.8"/><circle cx="14" cy="6" r="1.8"/><circle cx="18" cy="10" r="1.8"/><path d="M12 11c-4 0-6 4-5 6 1 2 3 1 5 1s4 1 5-1c1-2-1-6-5-6z"/></symbol>
+</defs></svg>
+<header><svg class="deco" viewBox="0 0 24 24"><use href="#leaf"/></svg><h1>Hojita</h1><p>Tu cuaderno de campo botánico</p>
+<span id="mode" class="pill" hidden></span></header>
+<nav role="tablist"><button data-t="id" class="on" role="tab">Identificar</button><button data-t="garden" role="tab">Mi jardín</button></nav>
+<main>
+<section id="id">
+<div id="start" class="card center"><svg class="big" viewBox="0 0 24 24"><use href="#leaf"/></svg>
+<p>Acércate a una hoja o a la planta completa, con buena luz.</p>
+<label class="btn">📷 Tomar foto<input id="cam" type="file" accept="image/*" capture="environment" hidden></label>
+<label class="btn alt">🖼 Elegir de la galería<input id="gal" type="file" accept="image/*" hidden></label></div>
+<div id="busy" class="card center" hidden><div class="sprout" aria-hidden="true"><i></i><b></b><b></b></div><p id="busyTxt">Observando tu planta…</p></div>
+<div id="msg" class="card center" hidden></div>
+<article id="res" hidden></article>
+</section>
+<section id="garden" hidden><div id="list"></div></section>
+</main>
+<footer>Las identificaciones y diagnósticos son orientativos. Ante plantas tóxicas o comestibles, consulta con un experto.</footer>
+<script src="js/app.js" type="module"></script></body></html>
